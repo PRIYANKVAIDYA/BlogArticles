@@ -1,0 +1,130 @@
+Introduction to Computer Networking
+Updated: Mar 2
+
+Introduction to Networking, What is OSI Model?, Functions of Different Layers of Client-Server Architecture And how the Data transfer takes place between two Client And Server and again to Client, Web Protocols such as UDP, TCP, IP.
+
+
+
+Welcome to the blog post. In this series 2 of Blog Posts, we would be covering Networking as a whole and will deploy you with brief knowledge about the networking Domain, How it works, and what its opportunity is!.
+
+
+
+Introduction to Computer Networking
+
+
+
+
+
+Ever wondered how the data is transferred so fastly and more efficiently through the internet,? or Thought about how is internet able to respond to requests fastly in the crowd of millions of devices connected to it.?
+This all happens with the magic of Networking Model, IP Addresses Allocation and Server's ability to respond fastly through the Various web protocols. The whole Computer Networking Model is based on OSI Model, which gives us brief how the innformation is transferred so accurately and efficiently. 
+
+Lets take an example that you load google.com in your web browser, when you inspect the Page you received, you'll in the NETWORK part that Every file (i.e Code, Cookie File, HTML, CSS, JS and many more) are loaded in form of 'Data Chunks' in order depending upon server responding capacity. And this even becomes more interesting that how this process being executed at the backend of the process. Well, let's start to understand with basic terminologies such as IP adresses. 
+IP adresses are the adresses in simple words are just as the phonebook for Computers. While loading the Web-Page you are assigning IP adresss by the router/modem by which you are connected. Now when the Google Server recieves your request, it will only see the global IP adress of the router. While Google sends the response it goes to the Global IP adress of the router and Router then sends it to our device's local IP Adress through dome protocols. 
+
+
+Backbone of Computer Networking (OSI Model)
+
+All the pocesses which takes place in backend of the Client-Server Interactions are through OSI Model. This Model is divided into 7 Different Layers, which perform together in Chain, to fulfill the request of the Client.
+
+Consider that you are requesting google.com on your web browser which is connected to the Router(Internet is provided by Internet service provider(ISP) which assigns unchanged Global IP Address to the router | The Router then Assigns the Local IP Address to the device to which it is connected)
+
+The OSI Model here is explained on the basis of interaction between Client-Server Interaction. 
+Client request the webpage to webserver 
+
+
+
+
+
+1) Application Layer
+
+This happens at the User Interface level or more Specifically at Software level, where we are requesting from a particular Software or web browser. It may be as simple as sending text to some person, or submitting the application etc. This layer handles about user's behavior and activity for requesting the server to respond according to it.
+
+2) Presentation Layer
+--->Whatever is your request is passed through the Application Layer, it surpasses to this which handles to convert your text, Audio, jpeg file to machine-understandable language.
+
+---> This layer also is responsible for Encryption of the User's Request and also Compresses the file size for reducing the Traffic 
+3) Session Layer
+Not different from the Presentation layer, it handles the Authentication and Authorization of File shared from Client.
+4) Transport Layer
+--->Here Comes the main Part, All the data which you have shared is being segmented into Data Chunks to manage the flow control in the System. This is the main part of this Layer.!
+--->It uses #UDP #TCP protocols. UDP protocols are Much faster to transfer than TCP protocols, but at the same time UDP protocols has the risk for data to be deleted and lost, while in TCP Protocols (Highly used in Emailing gives the verification to the user and Internet that Data has been reached to the destination safely)
+---> It also manages the Error Control to manage the error if present in the User Entered Data
+---> One myth that someone understands is that Transformation layer is responsible for transporting the data overseas between the users but, Transformation layer transfers all the data from Network layer to Application Layer during receiving and Vice-versa during Exporting, while Network layer is responsible for transferring data overseas in the form of packets.
+---> This layer also ensures takes care of Traffic Congestion control which mainly arises due to different in Buffer loading of items on receiver's end and application End.
+---> In order to receive the Data in proper Manner, Transfer layer uses the property called as Checksums, i.e. the Data packet received from the Network layer is being allowed to go through Cryptographic Hash function which assigns the Checksum value and after it detects  whether the file is corrupted or with High-Level Errors.
+5) Network Layer
+This layer is concerned about transmission of data from one Computer to other computer connected to different Network.
+
+Now as all the data has been segmented into chunks, the Network layer now assigns the IP Address for the receiver's and Sender's through logical Addressing. 
+
+---> This is the layer where Router/Modem Lives (i.e. Functionality of Router plays a role)
+
+---> The transfer of the data takes place by the Routers & each router has the Routing Table in it, which consists of the series of router locations through which data must be passed to the destination. 
+
+---> This layer works on the protocols of IP adress which ensures the information to be delivered at the right place.
+6) Data Link Layer
+It receives the data packet consisting of IP Addresses of Sender and receiver, this layer adds MAC Addresses to each data packet hence a Data Frame would be established.
+
+Now with so many layers of authorization of Data transfer, the data gets reached to the Server. 
+7) Physical Layer
+--->The data as received by the Server in the bit format, the Server understands the request being made by the Global Address of the ISP(Internet Service Provider).
+
+---> Then it sends response to the receiver through following same chain of order.
+
+ Another Model (TCP/IP)
+ Another Model (TCP/IP)
+This model is as similar to that of the OSI but it consists of 5 Layers( 2 layers has got combined to 1)
+
+
+​1) Application Layer
+
+​
+
+2) Transport Layer
+
+(Presentation, session, transport layer got combined)
+
+3) Network Layer
+
+​
+
+4) Data Link Layer
+
+​
+
+​5) Physical Layer
+
+​
+
+Web-Protocols: 
+There are bunch of Internet Protocols which help in transfer of data to the right location and without Data lost, and Corrupt Situations. 
+The most used web Protocols which We'll discuss here is IP, UDP, TCP, HTTP.
+
+
+IP Address: The IP Address consists of the Four numeric values each separated with( . ), Lies in the Networking Layer and helps to reach the data to the Specific Location.
+It's like xxx.xxx.xxx.xxx . Each Numeric value has the number <256. 
+The First 3 highlighted Colour is the your network Adress which is assigned by the ISP of the Router to which your device is Connected. The remaining value denotes to the Host ID or Device ID.
+---> Each of your data packet consists of the Sender's and receiver's IP Address, which help to routes it's path through different routers to reach the location.
+
+
+UDP: This are not Commonly used protocols in every Application, but are quite suited for Video Conferencing, Gaming etc. It's so that because the data transffered through this protocol might get lost, and even Corrupted during Transfer. The data packet which will be recienved might not be in the same order in which sender sent. 
+---> This uses the Checksums which finds whether the data is corrupted or not, but don't take action against it, and simply passes on to the rest network.
+
+
+TCP : This is the Commonly used protocol due to it's Specific Properties which help to Authenticate the Data being Shared. And highly used in Mail,
+
+---> It is responsible of dividing the data packet in Chunks, assigning them with their Headers, and port Numbers to it.
+
+---> Also in Vice-Versa it transfers the data to application layer by reading the specific port number to the data packet. 
+---> It takes care if the data received is in the correct Order or not. And also checks whether the data is arrived or not.
+
+---> This protocol takes care of the Traffic Congestion, as the speed in which data is received and sent in the application may vary. Also checks the if the 3 way Handshake has happened between Client and server took place or not. 
+
+ 
+
+Conclusions
+So for every communication takes place in the world of internet, it does with help of OSI Model. This model being a backbone, All the protocols, Processes, Methods are runned here. This was being an overview of the way how the data is transferred via Internet. Next blog will be realted to Web-3 and Smart Contracts that how they will be changing the world in near Future. Also Comment your suggestions related to next blog and review this one there as well. Warm Thank You to all for being with the blog till the end. See you then in next blog!.
+
+Thank you!.
+Priyank Vaidya 
+Signing Off...
